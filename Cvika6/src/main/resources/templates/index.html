@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <form th:action="@{/player}" method="post">
+        <label for="url"> Video URL:</label>
+        <input id="url" name="video_url" type="text">
+        <button name="submit" type="submit">Play</button>
+
+        <label for="muted"> Muted:</label>
+        <input id="muted" name="muted" type="checkbox">
+
+        <label for="autoplay"> Autoplay:</label>
+        <input id="autoplay" name="autoplay" type="checkbox">
+
+        <label for="width"> Video width:</label>
+        <input id="width" name="width" type="text">
+    </form>
+</body>
+</html>
