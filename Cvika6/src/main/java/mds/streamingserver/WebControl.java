@@ -25,7 +25,7 @@ public class WebControl
     {
         this.handler = handler;
     }
-    private final static File mp4 = new File("/home/oswin/Desktop/Code/Java/MDS/Cvika5/files/videos/bbb_1080p.mp4");
+    private final static File mp4 = new File("path/to/file");
 
 
     @GetMapping("video")
@@ -57,10 +57,12 @@ public class WebControl
     }
 
     @RequestMapping(value="/player", method = {RequestMethod.POST})
-    public String player(Model model, @RequestParam String video_url,
-                                      @RequestParam(defaultValue = "false") boolean muted,
-                                      @RequestParam(defaultValue = "false") boolean autoplay,
-                                      @RequestParam(defaultValue = "1000px") String width)
+    public String player(
+            Model model,
+            @RequestParam String video_url,
+            @RequestParam(defaultValue = "false") boolean muted,
+            @RequestParam(defaultValue = "false") boolean autoplay,
+            @RequestParam(defaultValue = "1000px") String width)
     {
         if (StringUtils.isEmpty(video_url))
             {
