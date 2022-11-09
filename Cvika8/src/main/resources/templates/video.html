@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Stránka pro přehrání videa z URL</title>
+    <script type="text/javascript" th:src="@{/js/dash.all.debug.js}"></script>
+</head>
+<body>
+
+<video th:src="@{'/getvideo/'+${file}}" controls></video>
+
+</body>
+</html>

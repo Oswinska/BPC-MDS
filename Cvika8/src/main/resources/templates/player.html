@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player</title>
+</head>
+<body>
+    <h2>Přehrávání MP4 streamu</h2>
+
+    <p id="error" th:if="${#strings.isEmpty(video_url)}">Nebyla zadaná URL</p>
+
+    <video type="video/mp4" th:src="${video_url}" th:width="${width}" controls th:muted="${muted}" th:autoplay="${autoplay}" poster="https://raw.githubusercontent.com/ENeMy235/MDS/main/Screen2.jpg"> </video>
+</body>
+</html>

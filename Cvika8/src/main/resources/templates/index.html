@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <div>
+    <form method="post" th:action="@{/dashPlayer}">
+        <input name="url" id="url_local" value="/file" />
+        <input type="submit" value="Play local mp4 stream"/>
+    </form>
+
+    <form method="post" th:action="@{/dashPlayer}">
+        <input name="url" id="url_mp4" value="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
+        <input type="submit" value="Play mp4 stream from URL"/>
+    </form>
+
+    <form method="post" th:action="@{/dashPlayer}">
+        <input name="url" id="url_dash" value="https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd"/>
+        <input type="submit" value='Play dash stream from URL'/>
+    </form>
+
+    <form method='post' th:action="@{/dashPlayer}">
+        <input name='url' id="url_dash_manifest" value="/dash/manifest.mpd"/>
+        <input type='submit' value='Play local dash stream'/>
+    </form>
+
+    <form method='post' th:action="@{/dashPlayer}">
+        <input name='url' id="url_hls" value="/hls/playlist.m3u8"/>
+        <input type='submit' value='Play local hls stream'/>
+    </form>
+
+    </div>
+
+</body>
+</html>
